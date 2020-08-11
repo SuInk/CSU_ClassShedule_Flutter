@@ -1,7 +1,7 @@
 # 中南大学课程表-Flutter
 
 ## 项目简介
-中南课表app的整体参考了另一个课程表项目：[南哪课表](https://github.com/idealclover/NJU-Class-Shedule-Flutter)，并使用了Flutter框架，这使得中南课表app可以轻易地在安卓和iOS运行。
+中南课表app的整体借用了另一个课程表项目：[南哪课表](https://github.com/idealclover/NJU-Class-Shedule-Flutter)，并使用了Flutter框架，这使得中南课表app可以轻易地在安卓和iOS运行。
 ## 下载使用
 
 
