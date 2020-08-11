@@ -41,7 +41,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.lilystudio.wheretosleepinnju"
+        applicationId "com.suink.wheretosleepincsu"
         minSdkVersion 18
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()

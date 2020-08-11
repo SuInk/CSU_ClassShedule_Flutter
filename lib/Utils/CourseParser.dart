@@ -5,9 +5,12 @@ import '../Models/CourseTableModel.dart';
 import '../Models/CourseModel.dart';
 import '../Resources/Constant.dart';
 
+/*
+修改 by SuInk
+ */
 class CourseParser {
   final RegExp patten1 = new RegExp(r"(\d{1,2})(\d{1,2})节");
-  final RegExp patten2 = new RegExp(r"(\d{1,2})-(\d{1,2})\(单*周\)");
+  final RegExp patten2 = new RegExp(r"(\d{1,2})-(\d{1,2})\((单|双)*周\)");
   final RegExp patten3 = new RegExp(r"从第(\d{1,2})周开始");
   final RegExp patten4 = new RegExp(r"(\d+)(,\d+)*\(周\)");
 

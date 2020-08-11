@@ -333,10 +333,10 @@ class S {
     );
   }
 
-  /// `加入用户群一起愉快地玩耍吧！\n轻触直接加群，长按复制群号`
+  /// `轻触直接反馈`
   String get report_subtitle {
     return Intl.message(
-      '加入用户群一起愉快地玩耍吧！\n轻触直接加群，长按复制群号',
+      '轻触直接反馈',
       name: 'report_subtitle',
       desc: '',
       args: [],
@@ -1153,50 +1153,50 @@ class S {
     );
   }
 
-  /// `开发者 idealclover`
+  /// `开发者 rainskyke`
   String get developer {
     return Intl.message(
-      '开发者 idealclover',
+      '开发者 rainskyke',
       name: 'developer',
       desc: '',
       args: [],
     );
   }
 
-  /// `博客：https://idealclover.top\nEmail：idealclover@163.com`
+  /// `博客：https://suink.cn\nEmail：leisurenot@outlook.com`
   String get introduction {
     return Intl.message(
-      '博客：https://idealclover.top\nEmail：idealclover@163.com',
+      '博客：https://suink.cn\nEmail：leisurenot@outlook.com',
       name: 'introduction',
       desc: '',
       args: [],
     );
   }
 
-  /// `所使用到的开源库`
+  /// `所用到的开源项目(大部分)`
   String get open_source_library_title {
     return Intl.message(
-      '所使用到的开源库',
+      '所用到的开源项目(大部分)',
       name: 'open_source_library_title',
       desc: '',
       args: [],
     );
   }
 
-  /// `shared_preferences: 0.5.3+4\npackage_info: 0.4.0+6\nflutter_bugly: 0.2.6\nurl_launcher: ^5.1.2\nscoped_model: 1.0.1\nfluttertoast: 3.1.3\nsqflite: 1.1.6\nintl: 0.16.0`
+  /// `南哪课表2.5.2：\n https://github.com/idealclover/NJU-Class-Shedule-Flutter\n\n感谢@idealclover及其朋友`
   String get open_source_library_content {
     return Intl.message(
-      'shared_preferences: 0.5.3+4\npackage_info: 0.4.0+6\nflutter_bugly: 0.2.6\nurl_launcher: ^5.1.2\nscoped_model: 1.0.1\nfluttertoast: 3.1.3\nsqflite: 1.1.6\nintl: 0.16.0',
+      '南哪课表2.5.2：\n https://github.com/idealclover/NJU-Class-Shedule-Flutter\n\n感谢@idealclover及其朋友',
       name: 'open_source_library_content',
       desc: '',
       args: [],
     );
   }
 
-  /// `感谢@idealclover及其朋友`
+  /// ``
   String get easter_egg {
     return Intl.message(
-      '感谢@idealclover及其朋友',
+      '',
       name: 'easter_egg',
       desc: '',
       args: [],
@@ -1233,10 +1233,10 @@ class S {
     );
   }
 
-  /// `Hi！我是项目作者傻翠～\n\n看起来你已经导入我南教务处成功啦！撒花撒花！\n\n建议大家还是和自己教务系统中的课表对一下～避免出现什么bug～如果有bug的话欢迎反馈给我！设置-反馈中有交流群的群号～\n\n\n\n放心，这个弹框每次导入只会弹出一次，所以不会影响你的正常使用。`
+  /// `Hi！我是项目作者～\n\n看起来你已经导入我南教务处成功啦！撒花撒花！\n\n建议大家还是和自己教务系统中的课表对一下～避免出现什么bug～如果有bug的话欢迎反馈给我！设置-反馈中有我的的QQ号～\n\n放心，这个弹框每次导入只会弹出一次，所以不会影响你的正常使用。`
   String get welcome_content {
     return Intl.message(
-      'Hi！我是项目作者傻翠～\n\n看起来你已经导入我南教务处成功啦！撒花撒花！\n\n建议大家还是和自己教务系统中的课表对一下～避免出现什么bug～如果有bug的话欢迎反馈给我！设置-反馈中有交流群的群号～\n\n\n\n放心，这个弹框每次导入只会弹出一次，所以不会影响你的正常使用。',
+      'Hi！我是项目作者～\n\n看起来你已经导入我南教务处成功啦！撒花撒花！\n\n建议大家还是和自己教务系统中的课表对一下～避免出现什么bug～如果有bug的话欢迎反馈给我！设置-反馈中有我的的QQ号～\n\n放心，这个弹框每次导入只会弹出一次，所以不会影响你的正常使用。',
       name: 'welcome_content',
       desc: '',
       args: [],

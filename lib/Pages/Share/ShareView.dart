@@ -43,6 +43,7 @@ class _ShareViewState extends State<ShareView> {
               onTap: () async {
                 int index = await ScopedModel.of<MainStateModel>(context)
                     .getClassTable();
+
                 CourseProvider courseProvider = new CourseProvider();
                 List<Map> allCoursesMap =
                     await courseProvider.getAllCourses(index);
@@ -53,6 +54,8 @@ class _ShareViewState extends State<ShareView> {
                 Map rst = {'name': courseTable.name, 'courses': allCoursesMap};
 //                  print(rst.toString());
                 Dio dio = new Dio();
+                Toast.showToast(
+                    S.of(context).exporting_toast, context);
                 Response response = await dio.post("https://file.io",
                     data: {"text": json.encode(rst)},
                     options: Options(

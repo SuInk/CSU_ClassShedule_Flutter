@@ -1,5 +1,6 @@
 import 'package:scoped_model/scoped_model.dart';
-import 'package:wheretosleepinnju/Utils/States/MainState.dart';
+import 'package:wheretosleepincsu/Resources/Config.dart';
+import 'package:wheretosleepincsu/Utils/States/MainState.dart';
 
 import '../../generated/l10n.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,8 +10,11 @@ import '../../Components/Toast.dart';
 import 'ImportPresenter.dart';
 import 'dart:math';
 
+import 'Widgets/TermSelector.dart';
+
 class ImportView extends StatefulWidget {
   ImportView() : super();
+  String _Termnum ='';
 
   @override
   _ImportViewState createState() => _ImportViewState();
@@ -18,13 +22,24 @@ class ImportView extends StatefulWidget {
 
 class _ImportViewState extends State<ImportView> {
   ImportPresenter _presenter = new ImportPresenter();
+  Map _node = {
+    'weekTime': 0,
+    'termNum': '',
+    'startTime': 0,
+    'endTime': 0,
+    'classroom': '',
+    'startWeek': 0,
+    'endWeek': Config.MAX_WEEKS - 1,
+    'weekType': Constant.FULL_WEEKS
+  };
+
 
   TextEditingController _usrController = new TextEditingController();
   TextEditingController _pwdController = new TextEditingController();
   TextEditingController _captchaController = new TextEditingController();
   final FocusNode usrTextFieldNode = FocusNode();
   final FocusNode pwdTextFieldNode = FocusNode();
-  final FocusNode captchaTextFieldNode = FocusNode();
+  FocusNode captchaTextFieldNode = FocusNode();
 
   bool _checkboxSelected = false;
   double randomNumForCaptcha = Random().nextDouble();
@@ -94,6 +109,35 @@ class _ImportViewState extends State<ImportView> {
                   onEditingComplete: () =>
                       FocusScope.of(context).requestFocus(captchaTextFieldNode),
                 ),
+               //TODO 选择学期功能
+                /*
+                Row(children: <Widget>[
+                  Icon(
+                    Icons.code,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                  ),
+                  InkWell(
+                      child: Text(
+                        Constant.TERM_LIST[1] +
+                            ' ' ,
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Theme.of(context).primaryColor),
+                      ),
+                      onTap: () async {
+                        await showDialog<Map>(
+                            context: context,
+                            barrierDismissible: false,
+                            builder: (BuildContext context) {
+                              return NodeDialog();
+                            });
+                      })
+                ]),
+
+                 */
 
 
                 Row(
@@ -146,7 +190,9 @@ class _ImportViewState extends State<ImportView> {
                           Toast.showToast(
                               S.of(context).username_error_toast, context);
                         } else if (status == Constant.LOGIN_CORRECT) {
-                          bool isSuccess = await _presenter.getClasses(context);
+                          print('term${_node['termNum']}');
+                          bool isSuccess = await _presenter.getClasses(context,_node['termNum']);
+                          print('term${_node['termNum']}');
                           if (!isSuccess)
                             Toast.showToast(
                                 S.of(context).class_parse_error_toast, context);
@@ -167,3 +213,5 @@ class _ImportViewState extends State<ImportView> {
         }));
   }
 }
+
+

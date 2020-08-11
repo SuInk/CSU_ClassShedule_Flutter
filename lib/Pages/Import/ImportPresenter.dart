@@ -49,11 +49,14 @@ class ImportPresenter {
 //    });
   }
 
-  Future<bool> getClasses(BuildContext context) async {
+  Future<bool> getClasses(BuildContext context,String termnum) async {
     String url = Url.URL_CSU_HOST + Url.ClassJson;
-    String response = await httpUtil.get(url);
+    String response = await httpUtil.post(url,{
+    'xnxq01id': '2020-2021-1'
+
+    });
     print('教室的信息${response.replaceAll('\\n\\n','},{')}');
-    response = response.replaceAll('\\n\\n','\\n","xq":2,"kcmc":"大学物理B..."}, {"jc":3,"title":"');
+    response = response.replaceAll('\\n\\n','\\n","xq":2,"kcmc":"某门课程..."}, {"jc":3,"title":"');
     List book = json.decode(response);
     print('课程${book[2]}');
     CourseParser cp = new CourseParser(book);

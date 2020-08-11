@@ -132,6 +132,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_bugly:
+    dependency: "direct main"
+    description:
+      name: flutter_bugly
+      url: "http://mirrors.cnnic.cn/dart-pub"
+    source: hosted
+    version: "0.2.8"
   flutter_localizations:
     dependency: "direct main"
     description: flutter

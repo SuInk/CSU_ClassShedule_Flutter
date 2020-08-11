@@ -9,9 +9,6 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:package_info/package_info.dart';
 import 'CourseTable/CourseTableView.dart';
 import '../Utils/UpdateUtil.dart';
-import '../Utils/States/MainState.dart';
-import '../Components/Dialog.dart';
-import '../Resources/Url.dart';
 
 class MainView extends StatelessWidget {
   @override

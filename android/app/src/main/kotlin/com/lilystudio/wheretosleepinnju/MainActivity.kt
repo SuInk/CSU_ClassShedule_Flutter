@@ -1,4 +1,4 @@
-package com.lilystudio.wheretosleepinnju
+package com.suink.wheretosleepincsu
 
 import android.os.Bundle
 
